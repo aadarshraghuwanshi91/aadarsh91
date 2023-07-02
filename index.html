@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="images/menu.png" class="menu-icon">
+            <img src="images/logo.png" class="logo">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" id="searchbar" onkeyup="search_animal()" name="search" placeholder="search">
+                <img src="images/search.png">
+            </div>
+            <img src="images/voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" >
+            <img src="images/more.png" >
+            <img src="images/notification.png" >
+            <img src="images/Jack.png" class="user-icon">
+        </div>
+    </nav>
+
+
+   <!-- -------------------back-video starts------------ -->
+        <div class="back-video">
+            <video id="myVideo" loop autoplay muted class="raaa" padding-bottom: 0px; data-animation-in="fadeInUp" data-delay-in="2">
+              <source src="main-video-imagesdwde/movie.mp4" type="video/mp4">                                   
+                sorry, your browser doesn't support videos.
+              </video>      
+            <script>
+              let options = {
+                root: null,
+                rootMargin:'60px',
+                threshold:1.0
+              };
+              let callback = (entries, observer)=>{
+                entries.forEach(entry => {
+                  if(entry.target.id == 'myVideo')
+                  {
+                    if(entry.isIntersecting){
+                      entry.target.play();
+                    }
+                    else{
+                      entry.target.pause();
+                    }
+                  }
+                });
+              }
+              let observer = new IntersectionObserver(callback, options);
+              observer.observe(document.querySelector('#myVideo'));
+            </script>                       
+            <script>
+                  var my=document.getElementById("myVideo");
+              
+              function mutevideo(){
+                my.muted=true;
+              }
+        
+              function unmutevideo(){
+                my.muted=false;
+              }
+          </script>
+           <ul class="my-controls" data-animation-in="fadeInUp" data-delay-in="3">       
+                <li onclick="mutevideo()"><a href="#" class="b b-hov if-button">mute</a></li>
+                <li onclick="unmutevideo()"><a href="#" class="v v-hov c-button">unmute</a></li>
+            </ul>   
+        </div> 
+   <!-- -------------------back-video ends------------ --> 
+
+
+
+
+<!-- ----------------main---------------- -->
+<div class="container">
+    <div class="banner">
+        <img src="images/banner.png">
+    </div>
+    <div class="lisi-container">
+            <li class="animals">Cat<div class="vid-list">
+                <a href="play-video.html"><img src="images/thumbnail1.png" class="thumbnail"></a>
+                
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="play-video.html">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>
+            
+            <li class="animals">dog<div class="vid-list">
+                <a href=""><img src="images/thumbnail2.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>
+            
+            <li class="animals">dog<div class="vid-list">
+                <a href=""><img src="images/thumbnail3.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>
+            
+            <li class="animals">dog<div class="vid-list">
+                <a href=""><img src="images/thumbnail4.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>
+            
+            <li class="animals">dog<div class="vid-list">
+                <a href=""><img src="images/thumbnail5.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>
+            
+            <li class="animals">dog<div class="vid-list">
+                <a href=""><img src="images/thumbnail6.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>        
+            
+            <li class="animals">bb<div class="vid-list">
+                <a href=""><img src="images/thumbnail7.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>        
+            
+            <li class="animals">cc<div class="vid-list">
+                <a href=""><img src="images/thumbnail8.png" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/Jack.png">
+                    <div class="vid-info">
+                        <a href="">Best channel to learn coding that helps to gine all informations</a>
+                        <p>Easy Tips</p>
+                        <p>15k Views &bull; 2 days</p>
+                    </div>
+                </div>
+             </div>
+            </li>  
+    </div>
+
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
+
+  
